@@ -37884,8 +37884,8 @@ function createLobby() {
   console.log('🎮 Set isMultiplayerMode = true for lobby creation');
   
   console.log('Creating Socket.IO connection...');
-  // Connect to Railway server
-  socket = io('https://rgzw49wa.up.railway.app');
+  // Connect to current server (Render)
+  socket = io();
   
   socket.on('connect', () => {
     console.log('Socket connected, emitting createLobby');
@@ -37912,8 +37912,8 @@ function joinLobby() {
   console.log('🎮 Set isMultiplayerMode = true for lobby joining');
   
   console.log('Creating Socket.IO connection...');
-  // Connect to Railway server
-  socket = io('https://rgzw49wa.up.railway.app');
+  // Connect to current server (Render)
+  socket = io();
   
   socket.on('connect', () => {
     console.log('Socket connected, emitting joinLobby');
