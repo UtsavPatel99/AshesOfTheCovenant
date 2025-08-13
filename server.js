@@ -1154,6 +1154,11 @@ io.on('connection', (socket) => {
   });
 });
 
+// Root route - serve the main game
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'ww1game.html'));
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({
